@@ -2,6 +2,7 @@
   --clr-accent: #ff5f38;
   --clr-white: #efeae3;
   --clr-black: #0b0500;
+
   --size-400: 1rem;
 }
 
@@ -41,14 +42,16 @@ nav {
   display: flex;
   align-items: center;
   gap: 1vw;
+
+  h4 {
+    padding: 10px 20px;
+    border: 1px solid rgba(11, 5, 0, 0.2);
+    border-radius: 100vmax;
+    color: var(--clr-black);
+    font-size: 1.25em;
+
+    ::after {
+      content: "";
+    }
+  }
 }
-#nav-content h4 {
-  padding: 10px 20px;
-  border: 1px solid rgba(11, 5, 0, 0.2);
-  border-radius: 100vmax;
-  color: var(--clr-black);
-  font-size: 1.25em;
-}
-#nav-content h4 ::after {
-  content: "";
-}/*# sourceMappingURL=style.css.map */
