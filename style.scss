@@ -195,7 +195,7 @@ a {
       width: 30vw;
       height: 30vw;
       border-radius: 50%;
-      animation-name: hero-bubble;
+      animation-name: heroBubble;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
@@ -209,11 +209,54 @@ a {
   }
 }
 
-@keyframes hero-bubble {
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+
+  #moving-text {
+    margin-top: 4em;
+    display: flex;
+    overflow: hidden;
+
+    .container {
+      display: flex;
+      align-items: center;
+      animation-name: movingText;
+      animation-duration: 15s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      .text-list-point {
+        background-color: var(--clr-accent);
+        width: 3.75em;
+        height: 3.75em;
+        border-radius: 100vmax;
+        margin-inline: 1.75em;
+      }
+
+      h2 {
+        letter-spacing: -0.03em;
+        font-size: 8.75em;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@keyframes heroBubble {
   from {
     transform: translate(-10%, 10%);
   }
   to {
     transform: translate(10%, -10%);
+  }
+}
+
+@keyframes movingText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
